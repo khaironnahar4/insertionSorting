@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort</title>
+    <script>
+        let array = [23,45,13,76,32,1,9,7];
+        function insertionSort(array){
+            let current,j;
+            for(let i=1; i<array.length; i++){
+                current=array[i];
+                j=i--;
+                while(j>=0 && array[j]>current){
+                    array[j+1]=array[j];
+                    j--;
+                }
+                array[j+1]=current;
+            }
+        }
+        insertionSort(array);
+        console.log(array);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
